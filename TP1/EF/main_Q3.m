@@ -40,3 +40,9 @@ x = mesh.som_coo(:,1);
 y = mesh.som_coo(:,2);
 
 trimesh(tri, x, y, u);
+
+
+% Verification de l'assemblage de M 
+% Res doit valoir l'aire du domaine
+v = ones(mesh.nbs,1);
+Res = v'*M*v;
