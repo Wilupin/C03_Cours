@@ -50,9 +50,7 @@ alpha = A_bis\F_bis;
 
 sol = zeros(mesh.nbs,1);
 
-% for k = 1,20
-%     sol(inconnues) = sol(inconnues) + alpha(k).*phi(inconnues,k); 
-% end
+%sol(inconnues) = ...;
 
 tri = mesh.elm_som;
 x = mesh.som_coo(:,1);
