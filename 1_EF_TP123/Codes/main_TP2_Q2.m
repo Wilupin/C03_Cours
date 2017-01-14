@@ -1,13 +1,13 @@
 % Script_Ex1.m
 %
 % Lecture du maillage 'DOM1.amdba'
-mesh = lect_mesh('DOM1');
+mesh = lect_mesh('../Meshs/DOM1');
 % 1 raffinement ...
 mesh = raf_mesh(mesh);
 tri = mesh.elm_som;
 x   = mesh.som_coo(:,1);
 y   = mesh.som_coo(:,2);
-% Trac� du maillage
+% Trace du maillage
 triplot(tri, x, y);
 %
 kappa = ones(mesh.nbt, 1); % kappa(ie)=1 
