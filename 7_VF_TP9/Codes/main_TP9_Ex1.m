@@ -1,14 +1,14 @@
 clear all; 
 
-mesh = lect_mesh('../Meshs/dam1');
+mesh = lect_mesh('../Meshs/dam0');
 mesh = face_number(mesh);
 
 
 % Initialisation des variables de temps
 T  = 200;
 
-dt = 0.4; % Pour dam0
-dt = 0.1; % Pour dam1
+dt = 0.1; % Pour dam0
+%dt = 0.1; % Pour dam1
 %dt = 0.05; % Pour dam2 
 
 N_pt = floor(T/dt); 
@@ -19,7 +19,7 @@ V_t = init_sw(mesh);
 % ---- Variables pour la visualisation
 x = mesh.som_coo(:,1); 
 y = mesh.som_coo(:,2); 
-min(V_t(1,:))
+
 tri = mesh.elm_som;
 
 t = 0;
@@ -32,7 +32,7 @@ for k=1:N_pt
     fprintf('Vitesse x min : %f | Vitesse y min : %f \n\n', ...
         min(V_t(2,:)./V_t(1,:)), min(V_t(3,:)./V_t(1,:)));  
     
-    V_t = conv_sw(mesh, V_t, dt);
+    V_t = conv_sw_lagrange(mesh, V_t, dt);
     V_s = tri_to_som(mesh, V_t(1,:));
     
     clf();
@@ -49,5 +49,5 @@ for k=1:N_pt
     t = t + dt; 
     
        
-    
+    pause
 end
