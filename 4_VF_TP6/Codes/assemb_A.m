@@ -6,7 +6,7 @@ function [A] = assemb_A(K,mesh)
 %
 % Ne tient pas compte des Conditions aux Limites
 % K est suppose constant par element et transmis sous forme de tableau
-% colonne à mesh.nbt lignes
+% colonne a mesh.nbt lignes
 %
 
 % Intialisation

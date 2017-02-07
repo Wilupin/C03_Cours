@@ -38,7 +38,7 @@ for ie = 1:mesh.nbab
     % Longueur du segment
     d = sqrt((x(1)-x(2)).^2 + (y(1)-y(2)).^2);
     
-    % Coordonnes du centre de gravit? du segment
+    % Coordonnes du centre de gravite du segment
     g2_x = sum(x(:))/2;
     g2_y = sum(y(:))/2;
     
@@ -47,7 +47,7 @@ for ie = 1:mesh.nbab
     
     F(is) = F(is) + d*(fung(g2_x,g2_y)+alpha*ua(z,g2_x,g2_y))*0.5*ones(2,1);
     % On multiplie par 0.5*ones(2,1) car les fonctions de base valent 1/2
-    % au centre de gravit? de l'arr?te
+    % au centre de gravite de l'arr?te
     
 end
   

@@ -47,7 +47,4 @@ for k=1:N_pt
     drawnow;
     
     t = t + dt; 
-    
-       
-    pause
 end

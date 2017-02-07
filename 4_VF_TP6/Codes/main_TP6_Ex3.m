@@ -42,7 +42,6 @@ trisurf(tri, x, y, f(x,y) - sol_s);
 % formule tri_to_sum qui est decentree et donc gere plus mal les sommets
 % aux bords. 
 
-
 % ---- Erreur en norme 2 et en norme infinie
 norm_2   = sqrt((f(x,y)-sol_s)'*(f(x,y)-sol_s));
 norm_inf = max(f(x,y)-sol_s);

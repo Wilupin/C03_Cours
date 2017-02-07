@@ -22,7 +22,7 @@ for ia=1:mesh.nba
     % ---- Flux pour les arretes interieures
     if(mesh.fac_zon(ia) == 0) 
               
-        [ pstar, unustar, UKL] = varstar( nu, [Vold_t(:,ie(1)),  Vold_t(:, ie(2))] );
+        [ pstar, UKL] = varstar( nu, [Vold_t(:,ie(1)),  Vold_t(:, ie(2))] );
 
         phi = UKL + [ 0; pstar*nu(1); pstar*nu(2)];  
         
